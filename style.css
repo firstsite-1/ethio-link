@@ -26,7 +26,7 @@ nav a:hover {
 header {
     background-color: #eef4f0;
     text-align: center;
-    padding: 80px 20px;
+    padding: 35px 20px;
 }
 header h1 {
     font-size: 56px;
@@ -173,11 +173,11 @@ section h2 {
 }
 .contact-card {
     background-color: #163c32;
-    padding: 30px;
-    border-radius: 10px;
+    padding: 10px 20px;
+    border-radius: 0;
     display: grid;
-grid-template-columns: 1.4fr 1fr;
-gap: 50px;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 30px;
 }
 .contact-card h3,
 .contact-card p {
@@ -185,7 +185,12 @@ gap: 50px;
 }
 #contact {
     background-color: #163c32;
+    width: 100vw;
     max-width: none;
+    margin-left: calc(50% - 50vw);
+    margin-right: 0;
+    box-sizing: border-box;
+    padding: 25px 20px;
 }
 .profile-card {
     background-color: transparent;
@@ -368,4 +373,584 @@ gap: 50px;
 
 .send-message-btn:hover {
     background-color: #245747;
+}
+
+/* ======================================
+   JALA ETHIO LINK - OUR SERVICES
+   Green and Gold Pathway Design
+====================================== */
+
+.jala-services {
+    background: #f8faf7;
+    padding: 5px 25px;
+}
+
+.services-heading {
+    text-align: center;
+    margin-bottom: 65px;
+}
+
+.services-label {
+    color: #b58a28;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 15px;
+}
+
+.jala-services .services-heading h2 {
+    color: #14532d;
+    font-size: 42px;
+    margin: 15px 0;
+}
+
+.services-heading p {
+    color: #526457;
+    font-size: 20px;
+}
+
+/* Pathway container */
+
+.jala-services-list {
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Curved green pathway */
+
+
+
+.jala-services-list::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 120px;
+    transform: translateX(-50%);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 600' preserveAspectRatio='none'%3E%3Cpath d='M60 0 C110 50 110 100 60 150 S10 250 60 300 S110 400 60 450 S10 550 60 600' fill='none' stroke='%23176b45' stroke-width='9'/%3E%3Cpath d='M70 0 C120 50 120 100 70 150 S20 250 70 300 S120 400 70 450 S20 550 70 600' fill='none' stroke='%23d4af37' stroke-width='4'/%3E%3C/svg%3E");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    pointer-events: none;
+}
+
+
+
+/* Individual services - no boxes */
+
+.jala-service {
+    position: relative;
+    width: 50%;
+    padding: 25px 65px;
+    margin-bottom: 45px;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.jala-service:nth-child(odd) {
+    margin-right: auto;
+    text-align: right;
+}
+
+.jala-service:nth-child(even) {
+    margin-left: auto;
+    text-align: left;
+}
+
+/* Numbered gold circles */
+
+.service-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 25px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #14532d;
+    color: #f5d77b;
+    border: 4px solid #d4af37;
+    font-size: 19px;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.jala-service:nth-child(odd) .service-number {
+    right: -28px;
+}
+
+.jala-service:nth-child(even) .service-number {
+    left: -28px;
+}
+
+/* Large readable text */
+
+.jala-service .service-content h3 {
+    color: #14532d;
+    font-size: 25px;
+    line-height: 1.35;
+    margin-bottom: 14px;
+}
+
+.jala-service .service-content p {
+    color: #334155;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* Mobile-friendly design */
+
+@media (max-width: 768px) {
+    .jala-services {
+        padding: 55px 18px;
+    }
+
+    .jala-services .services-heading h2 {
+        font-size: 32px;
+    }
+
+    .jala-services-list::before {
+        left: 26px;
+        width: 0;
+        transform: none;
+        border-right: none;
+        border-left: 5px solid #176b45;
+        border-radius: 0;
+    }
+
+    .jala-service,
+    .jala-service:nth-child(odd),
+    .jala-service:nth-child(even) {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 20px 5px 25px 85px;
+        text-align: left;
+    }
+
+    .jala-service .service-number,
+    .jala-service:nth-child(odd) .service-number,
+    .jala-service:nth-child(even) .service-number {
+        left: 0;
+        right: auto;
+        top: 20px;
+    }
+
+    .jala-service .service-content h3 {
+        font-size: 22px;
+    }
+
+    .jala-service .service-content p {
+        font-size: 17px;
+    }
+}
+
+/* JALA ETHIO LINK - Our Services Image */
+
+.jala-services {
+    max-width: 1100px;
+    background-color: #ffffff;
+    padding: 30px 15px;
+    text-align: center;
+}
+
+.jala-services-image {
+    display: block;
+    width: 100%;
+    max-width: 850px;
+    height: auto;
+    margin: 0 auto;
+}
+
+/* Show the HTML services design */
+
+.jala-services .services-heading,
+.jala-services .jala-services-list {
+    display: block;
+}
+
+/* New Our Services background design */
+/* Temporarily hide the old curved Services design */
+
+.jala-services-list::before {
+    display: none;
+}
+/* Show copyable Services text */
+.jala-services .services-heading,
+.jala-services .jala-services-list {
+    display: block;
+}
+/* Display the new text-free Services image */
+
+.jala-services {
+    background-image: none;
+    min-height: 0;
+}
+/* Adjust text to fit inside the new Services cards */
+
+.jala-service {
+    padding: 10px 35px;
+    margin-bottom: 25px;
+}
+
+.jala-service .service-content h3 {
+    font-size: 18px;
+    line-height: 1.3;
+    margin-bottom: 8px;
+}
+
+.jala-service .service-content p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+/* Hide old service numbers */
+.jala-services .service-number {
+    display: none;
+}
+/* Prepare service text for the new image layout */
+
+.jala-services .jala-service,
+.jala-services .jala-service:nth-child(odd),
+.jala-services .jala-service:nth-child(even) {
+    text-align: left;
+}
+/* Position Services text over the new background */
+
+.jala-services {
+    position: relative;
+}
+
+.jala-services-list {
+    position: relative;
+    max-width: 100%;
+    padding: 0;
+}
+
+.jala-services .jala-service {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 25px;
+    text-align: left;
+    background-color: #f8faf7;
+    border: 2px solid #d4af37;
+    border-radius: 15px;
+}
+.jala-services .service-content {
+    max-width: 100%;
+}
+/* Test Service 01 text on the new design */
+
+.jala-services-design {
+    position: relative;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.jala-services-design .jala-services-image {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+.jala-services-design .service-test-text {
+    position: absolute;
+    top: 32%;
+    left: 5%;
+    width: 19%;
+    text-align: center;
+    color: #163c32;
+}
+
+.service-test-text h3 {
+    font-size: clamp(10px, 1.3vw, 15px);
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+
+.service-test-text p {
+    font-size: clamp(9px, 1vw, 12px);
+    line-height: 1.3;
+}
+/* Service 02 - Document Coordination */
+
+.jala-services-design .service-test-text-02 {
+    position: absolute;
+    top: 32%;
+    left: 29%;
+    width: 19%;
+    text-align: center;
+    color: #163c32;
+}
+
+.service-test-text-02 h3 {
+    font-size: clamp(10px, 1.3vw, 15px);
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+
+.service-test-text-02 p {
+    font-size: clamp(9px, 1vw, 12px);
+    line-height: 1.3;
+}
+/* Service 03 - Administrative Follow-Up */
+
+.jala-services-design .service-test-text-03 {
+    position: absolute;
+    top: 30%;
+    left: 53%;
+    width: 19%;
+    text-align: center;
+    color: #163c32;
+}
+
+.service-test-text-03 h3 {
+    font-size: clamp(10px, 1.3vw, 15px);
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+
+.service-test-text-03 p {
+    font-size: clamp(9px, 1vw, 12px);
+    line-height: 1.3;
+}
+/* Service 04 - Local Support */
+
+.jala-services-design .service-test-text-04 {
+    position: absolute;
+    top: 30%;
+    left: 77%;
+    width: 19%;
+    text-align: center;
+    color: #163c32;
+}
+
+.service-test-text-04 h3 {
+    font-size: clamp(10px, 1.3vw, 15px);
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+
+.service-test-text-04 p {
+    font-size: clamp(9px, 1vw, 12px);
+    line-height: 1.3;
+}
+/* Service 05 - Institutional Relations */
+
+.jala-services-design .service-test-text-05 {
+    position: absolute;
+    top: 70%;
+    left: 13%;
+    width: 19%;
+    text-align: center;
+    color: #163c32;
+}
+
+.service-test-text-05 h3 {
+    font-size: clamp(10px, 1.3vw, 15px);
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+
+.service-test-text-05 p {
+    font-size: clamp(9px, 1vw, 12px);
+    line-height: 1.3;
+}
+/* Service 06 - Cross-Border Coordination */
+
+.jala-services-design .service-test-text-06 {
+    position: absolute;
+    top: 68%;
+    left: 41%;
+    width: 20%;
+    text-align: center;
+    color: #163c32;
+}
+
+.service-test-text-06 h3 {
+    font-size: clamp(10px, 1.3vw, 15px);
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+
+.service-test-text-06 p {
+    font-size: clamp(9px, 1vw, 12px);
+    line-height: 1.3;
+}
+/* Service 07 - Ongoing Communication & Support */
+
+.jala-services-design .service-test-text-07 {
+    position: absolute;
+    top: 68%;
+    left: 69%;
+    width: 20%;
+    text-align: center;
+    color: #163c32;
+}
+
+.service-test-text-07 h3 {
+    font-size: clamp(10px, 1.3vw, 15px);
+    line-height: 1.2;
+    margin-bottom: 8px;
+    transform: translateX(-14px);
+}
+
+.service-test-text-07 p {
+    font-size: clamp(8px, 0.9vw, 11px);
+    line-height: 1.2;
+    transform: translateX(-14px);
+}
+/* Hide old Services list */
+.jala-services .jala-services-list {
+    display: none;
+}
+/* Why Ethio Link - Position text over image */
+#why-ethio-link .why-image-container {
+    position: relative;
+}
+
+/* Box 01 - Local Presence */
+#why-ethio-link .why-text-01 {
+    position: absolute;
+    top: 27%;
+    left: 12%;
+    width: 32%;
+    text-align: center;
+    color: #163c32;
+}
+
+#why-ethio-link .why-text-01 h3 {
+    font-size: clamp(12px, 1.5vw, 18px);
+    line-height: 1.2;
+}
+#why-ethio-link .why-text-01 p {
+    font-size: clamp(13px, 1.5vw, 17px);
+    line-height: 1.3;
+    margin-top: 8px;
+}
+/* Why Ethio Link - Box 02 */
+#why-ethio-link .why-text-02 {
+    position: absolute;
+    top: 28%;
+    left: 53%;
+    width: 38%;
+    text-align: center;
+    color: #163c32;
+}
+
+#why-ethio-link .why-text-02 h3 {
+    font-size: clamp(12px, 1.5vw, 18px);
+    line-height: 1.2;
+}
+/* Box 02 - Description */
+#why-ethio-link .why-text-02 p {
+    font-size: clamp(13px, 1.5vw, 17px);
+    line-height: 1.3;
+    margin-top: 8px;
+}
+/* Send Message Form Layout */
+#client-message .message-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    text-align: left;
+}
+
+#client-message .message-container label {
+    display: block;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+#client-message .message-container input,
+#client-message .message-container textarea {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+#client-message .send-message-btn {
+    align-self: center;
+}
+/* Why Ethio Link - Box 03 */
+#why-ethio-link .why-text-03 {
+    position: absolute;
+    top: 60%;
+    left: 11%;
+    width: 28%;
+    text-align: center;
+    color: #163c32;
+}
+
+#why-ethio-link .why-text-03 h3 {
+    font-size: clamp(12px, 1.5vw, 18px);
+    line-height: 1.2;
+}
+
+#why-ethio-link .why-text-03 p {
+    font-size: clamp(12px, 1.3vw, 15px);
+    line-height: 1.3;
+    margin-top: 8px;
+}
+/* Why Ethio Link - Box 04 */
+#why-ethio-link .why-text-04 {
+    position: absolute;
+    top: 60%;
+    left: 38%;
+    width: 24%;
+    text-align: center;
+    color: #163c32;
+}
+
+#why-ethio-link .why-text-04 h3 {
+    font-size: clamp(12px, 1.5vw, 18px);
+    line-height: 1.2;
+}
+
+#why-ethio-link .why-text-04 p {
+    font-size: clamp(12px, 1.3vw, 15px);
+    line-height: 1.3;
+    margin-top: 8px;
+}
+/* Why Ethio Link - Box 05 */
+#why-ethio-link .why-text-05 {
+    position: absolute;
+    top: 60%;
+    left: 61%;
+    width: 28%;
+    text-align: center;
+    color: #163c32;
+}
+
+#why-ethio-link .why-text-05 h3 {
+    font-size: clamp(12px, 1.5vw, 18px);
+    line-height: 1.2;
+}
+
+#why-ethio-link .why-text-05 p {
+    font-size: clamp(12px, 1.3vw, 15px);
+    line-height: 1.3;
+    margin-top: 8px;
+}
+/* Why JALA Ethio Link - Egg Shape Heading */
+#why-ethio-link .why-egg-title {
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35%;
+    text-align: center;
+    color: #ffffff;
+    font-size: clamp(12px, 1.6vw, 21px);
+    line-height: 1.3;
+    margin: 0;
 }
